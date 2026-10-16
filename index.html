@@ -2,12 +2,115 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Site web github</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Développeur Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header avec navigation -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Alex Dev</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1>Bonjour le monde !</h1>
-    <p>Ceci est ma toute première page web.</p>
+    <!-- Section Accueil -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bonjour, je suis <span>Alex</span></h2>
+                <h3>Développeur Web Full-Stack</h3>
+                <p>Création de sites web performants et modernes</p>
+                <a href="#projects" class="btn">Voir mes projets</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/400" alt="Photo de profil">
+            </div>
+        </div>
+    </section>
 
+    <!-- Section À propos -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionné par le développement web depuis 2020, j'ai travaillé sur des projets variés allant des sites e-commerce aux applications SaaS.</p>
+                    <p>Mes compétences :</p>
+                    <ul class="skills">
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-react"></i> React</li>
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300" alt="Photo de profil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Mes réalisations</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projet 1">
+                    <h3>E-commerce Shop</h3>
+                    <p>Site de vente en ligne avec panier et paiement sécurisé</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-link"></i> Demo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Projet 2">
+                    <h3>Application SaaS</h3>
+                    <p>Dashboard analytique pour entreprises</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fas fa-code"></i> Code</a>
+                        <a href="#" target="_blank"><i class="fas fa-link"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <form>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Alex Dev. Tous droits réservés.</p>
+        </div>
+    </footer>
 </body>
 </html>

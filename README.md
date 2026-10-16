@@ -19,3 +19,5 @@ Bienvenue sur le dépôt de mon portfolio en ligne !
 1. Clonez le dépôt :
    ```bash
    git clone https://github.com/gushy3/gushy3.github.io.git
+
+![Lint Status](https://github.com/ton-pseudo/ton-depot/actions/workflows/eslint.yml/badge.svg)
