@@ -1,4 +1,5 @@
 name: Vérification de la Qualité du Code (Linter)
+
 on:
   push:
     branches:
