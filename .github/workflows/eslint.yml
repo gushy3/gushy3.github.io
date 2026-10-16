@@ -1,0 +1,28 @@
+name: Vérification de la Qualité du Code (Linter)
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code du projet
+        uses: actions/checkout@v4
+
+      - name: Configurer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-node: '20'
+
+      - name: Installer les outils de vérification
+        run: |
+          npm init -y
+          npm install eslint --save-dev
+
+      - name: Lancer la vérification syntaxique
+        run: npx eslint . --ext .js --no-eslintrc --rule '{"no-unused-vars": "warn", "no-undef": "error"}'
