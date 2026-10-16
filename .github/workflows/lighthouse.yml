@@ -1,0 +1,27 @@
+name: Audit de Performance Lighthouse
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code du projet
+        uses: actions/checkout@v4
+
+      - name: Lancer l'audit Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          # Analyse directement le fichier index.html à la racine du projet
+          urls: |
+            http://localhost:8080/index.html
+          # Lance un mini-serveur local pour permettre l'analyse
+          localServerCommand: npx serve -p 8080 .
+          # Crée un rapport visuel public temporaire pour voir vos scores
+          uploadArtifacts: true
+          temporaryPublicStorage: true
